@@ -1,0 +1,24 @@
+{
+  "name": "parse_project",
+  "version": "1.0.0",
+  "description": "Application which use parser for getting information for client side",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xanaxYandex/phychology-page.git"
+  },
+  "author": "Growl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xanaxYandex/phychology-page/issues"
+  },
+  "homepage": "https://github.com/xanaxYandex/phychology-page#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "puppeteer": "^2.0.0"
+  }
+}
