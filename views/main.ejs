@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Nunito:300,400,600&display=swap"
+          rel="stylesheet">
+    <title>PSYCHOLOGIES</title>
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <h1 class="logo-text">PSYCHOLOGIES</h1>
+    </div>
+</header>
+<div class="main-wrapper">
+    <div class="articles">
+        <% articles.forEach(article => { %>
+            <article class="article-item">
+                <a href="<%= article.url %>">
+                    <img class="article-image" src="<%= article.image %>" alt="">
+                </a>
+                <div class="article-info">
+                    <a href="<%= article.url %>">
+                        <h2 class="article-title">
+                            <%= article.title %>
+                        </h2>
+                    </a>
+                    <span class="article-text">
+                        <%= article.content %>
+                    </span>
+                </div>
+            </article>
+        <% }); %>
+        <div class="pagination">
+            <% for(let i = 0; i < 10; i++) { %>
+                <% if (i + 1 === currentPage) { %>
+                    <a href="http://localhost:3000/articles/<%= i + 1 %>">
+                        <span class="page-number selected-page"><%= i + 1 %></span>
+                    </a>
+                <% } else { %>
+                    <a href="http://localhost:3000/articles/<%= i + 1 %>">
+                        <span class="page-number "><%= i + 1 %></span>
+                    </a>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+    <div class="side-block">
+        <span class="side-block__title">Сегодня читают</span>
+        <div class="topic-list">
+            <div class="list-items">
+                <% addContent.forEach(item => { %>
+                    <a class="item" href="<%= item.url %>">
+                        <img src="<%= item.image %>" alt="">
+                        <span class="item-text"><%= item.title %></span>
+                    </a>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

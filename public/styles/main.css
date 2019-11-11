@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Nunito:300,400,600|Raleway:300,400,500&display=swap');
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: aliceblue;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    padding: 10px 100px;
+    background: #7aa794;
+}
+
+.header > .logo > .logo-text {
+    font-size: 65px;
+    letter-spacing: 10px;
+    font-family: 'Architects Daughter', cursive;
+    color: white;
+    margin: 0;
+}
+
+.main-wrapper {
+    padding: 40px 170px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+.article-item {
+
+    padding: 20px;
+    background: rgba(220, 217, 233, 0.48);
+    box-shadow: 0 0 10px rgba(67, 67, 67, 0.4);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+
+
+.article-info {
+    margin-left: 30px;
+}
+
+.article-info > a {
+    text-decoration: none;
+}
+
+.article-title {
+    transition: .3s;
+    color: black !important;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.article-title:hover {
+    transition: .3s;
+    transform: scale(1.05) translateX(10px);
+    filter: drop-shadow(0 3px 7px black);
+}
+
+.article-image {
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.71);
+}
+
+.article-text {
+    font-size: 16px;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+}
+
+.side-block {
+    border-radius: 10px;
+    background: rgba(220, 217, 233, 0.48);
+    box-shadow: 0 0 10px rgba(67, 67, 67, 0.4);
+    margin-left: 20px;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-block__title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.topic-list {
+    margin-top: 30px;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    transition: .3s;
+    display: flex;
+    margin-bottom: 35px;
+    text-decoration: none;
+}
+
+.item:hover {
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+.item-text {
+    margin-left: 10px;
+    color: black !important;
+    font-size: 14px;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination > a {
+    text-decoration: none;
+}
+
+.page-number {
+    color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.17);
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: "Segoe UI Light";
+}
+
+.page-number:hover {
+    transition: .3s;
+    background: rgba(0, 0, 0, 0.63);
+    color: white;
+}
+
+.selected-page {
+    background: rgba(0, 0, 0, 0.63) !important;
+    color: white !important;
+}
+
+
